@@ -6,10 +6,13 @@ body{overflow-x:hidden}
 .memorial-card-new .memorial-cta{cursor:default}
 .feature-image{padding:0!important;overflow:hidden;background:#07182e!important}
 .feature-image img{width:100%;height:100%;object-fit:cover;display:block}
+/* Auction artwork is intentionally shown in full. Do not crop donor cards/photos. */
+.auction-photo-wrap{height:360px;background:#07182e}
+.auction-photo{object-fit:contain!important;object-position:center;background:#07182e}
 .auction-live-note{display:flex;gap:10px;align-items:flex-start;margin:0 auto 24px;max-width:920px;background:#eef6ff;border:1px solid #c8d9ec;border-left:4px solid #234c76;border-radius:11px;padding:14px 16px;color:#38506b;font-size:13px}
 .auction-live-note strong{color:#163a60}
 .bid-meta{margin-top:5px!important;font-size:10px!important;color:#d7e2ef!important;line-height:1.35}
-.bid-status-pill{display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border-radius:999px;background:#eef8ef;color:#2b6b36;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-top:8px}
+.bid-status-pill{display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border-radius:999px;background:#eef8ef;color:#2b6b36;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin:8px 0 15px;align-self:flex-start}
 .bid-status-pill:before{content:'';width:7px;height:7px;border-radius:50%;background:#3f9b4d}
 .bid-status-pill.pending{background:#fff6dd;color:#805f12}.bid-status-pill.pending:before{background:#d6a11f}
 .auction-card.is-leading{outline:2px solid rgba(239,189,69,.48);outline-offset:-2px}
@@ -26,6 +29,7 @@ body{overflow-x:hidden}
   .story-grid,.event-grid,.auction-grid,.auction-status-grid,.bid-panel{grid-template-columns:1fr}
   .card,.card.wide,.support-card{grid-column:span 12}
   .story-photo{height:auto;aspect-ratio:4/5}
+  .auction-photo-wrap{height:auto;aspect-ratio:4/3}
   .bid-panel{padding:20px}.registry-frame,.bid-frame{height:980px}
 }
 @media(max-width:640px){
@@ -34,7 +38,7 @@ body{overflow-x:hidden}
   .hero-new{padding:54px 0 82px}.hero-new-grid{min-height:auto}.hero h1{font-size:clamp(44px,14vw,62px)}.hero p{font-size:15px}
   .section,.story-stage{padding:54px 0}.ways-row{padding:20px 0 48px}.ways-grid{grid-template-columns:repeat(2,1fr);gap:10px}.way-tile{min-height:132px}
   .story-grid{gap:18px}.story-photo{aspect-ratio:4/5}.memorial-cta{font-size:18px;padding:15px 18px}
-  .auction-photo-wrap{height:auto;aspect-ratio:4/3}.auction-content{padding:20px}.auction-content h2{font-size:24px}.auction-figures{grid-template-columns:1fr 1fr}.auction-figure.current-bid{grid-column:1/-1}
+  .auction-photo-wrap{aspect-ratio:4/3}.auction-content{padding:20px}.auction-content h2{font-size:24px}.auction-figures{grid-template-columns:1fr 1fr}.auction-figure.current-bid{grid-column:1/-1}
   .auction-status-grid{padding:14px 0}.auction-status strong{font-size:18px}
   .bid-panel{margin-top:28px;padding:16px}.bid-copy h2{font-size:32px}.registry-frame,.bid-frame{height:900px}
   .support-actions{grid-template-columns:1fr}.event-meta{grid-template-columns:1fr}
