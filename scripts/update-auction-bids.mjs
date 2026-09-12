@@ -3,11 +3,12 @@ import { readFile, writeFile } from 'node:fs/promises';
 const FORM_ID = process.env.JOTFORM_FORM_ID || '262514458627059';
 const API_KEY = process.env.JOTFORM_API_KEY;
 const FIXTURE = process.env.JOTFORM_SUBMISSIONS_FILE;
-const CLOSE_AT = new Date('2026-09-14T10:00:00-04:00');
+const CLOSE_AT = new Date('2026-09-21T10:00:00-04:00');
 
 const items = {
   'Four Private Assisted Stretch Sessions — Goldmine Performance': { id: 'item-1', opening: 70, increment: 15 },
-  '3 Private Training Sessions — Goldmine Performance': { id: 'item-2', opening: 100, increment: 20 },
+  '3 Private Training Sessions — Goldmine Performance': { id: 'item-2', opening: 55, increment: 15 },
+  'Three Private Training Sessions — Goldmine Performance': { id: 'item-2', opening: 55, increment: 15 },
   'Color Powder Party — Cela Photography': { id: 'item-3', opening: 85, increment: 20 },
   'Professional Athlete Photo Shoot — Cela Photography': { id: 'item-4', opening: 150, increment: 25 },
   '1-Month Membership — Slate Wrestling Academy': { id: 'item-5', opening: 55, increment: 15 },
