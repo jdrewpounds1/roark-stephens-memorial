@@ -14,6 +14,21 @@
     .legacy-ribbon-img{position:static;display:block;width:160px;height:auto;margin:24px auto 0;opacity:1;border-radius:8px}
     .footer-ribbon{width:110px;height:auto;opacity:1;border-radius:6px}
     @media(max-width:760px){.ribbonmark.memorial-mark{width:72px;height:75px}}
+    .hero-new-grid{gap:34px}
+    .hero-new-copy{flex:1 1 58%}
+    .hero-new-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:0 1 360px;align-self:stretch;min-height:330px}
+    .hero-new-photos div{overflow:hidden;border:2px solid rgba(239,189,69,.62);border-radius:18px;background:#0b2340;box-shadow:0 14px 34px rgba(0,0,0,.25)}
+    .hero-new-photos img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+    .fundraiser-status{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+    .fundraiser-status-card{display:flex;align-items:center;gap:8px;min-height:48px;padding:8px 11px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:10px}
+    .fundraiser-status-card strong,.fundraiser-status-card span{display:block}
+    .fundraiser-status-card strong{text-transform:uppercase;letter-spacing:.1em;font-size:9px;color:#ffe6a5}
+    .fundraiser-status-card span{color:rgba(255,255,255,.78);margin-top:2px}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:#efbd45;flex:0 0 auto}
+    .fundraiser-status-card.active{border-color:rgba(239,189,69,.72);background:rgba(239,189,69,.14)}
+    .fundraiser-status-card.active .status-dot{background:#7ee08c;box-shadow:0 0 0 4px rgba(126,224,140,.14)}
+    .fundraiser-status-card.completed{opacity:.78}
+    @media(max-width:760px){.hero-new-grid{display:block}.hero-new-photos{margin-top:25px;min-height:230px}.fundraiser-status{display:grid;grid-template-columns:1fr}.fundraiser-status-card{width:100%}}
   </style>
 </head>
 <body>
@@ -34,8 +49,17 @@
       <div class="hero-new-copy">
         <span class="eyebrow">Roark &amp; Stephens Strong</span>
         <h1>We Remember.<br><em>We Support.</em><br>We Stand Together.</h1>
-        <p>A single place for remembrance, community events, memorial apparel, the silent auction, messages of support, and direct help for the Roark and Stephens families.</p>
+        <p>Honoring the Roark and Stephens families through community and action. Explore this space to share messages of support, find upcoming events, and participate in our fundraising efforts—from memorial apparel and silent auctions to direct aid.</p>
         <div class="actions hero-actions"><a class="btn primary" href="#direct-support">Support the Families ♥</a><a class="btn ghost" href="#memorial">Remember Brock &amp; Laikyn →</a></div>
+        <div class="fundraiser-status" aria-label="Fundraiser status">
+          <div class="fundraiser-status-card active"><span class="status-dot"></span><div><strong>Active now</strong><span>Silent Auction · closes September 21</span></div></div>
+          <div class="fundraiser-status-card upcoming"><span class="status-dot"></span><div><strong>Upcoming</strong><span>Friday Night One-Pitch Softball · October 9</span></div></div>
+          <div class="fundraiser-status-card completed"><span class="status-dot"></span><div><strong>Completed</strong><span>Labor Day Wrestling Fundraiser · $3,400 raised</span></div></div>
+        </div>
+      </div>
+      <div class="hero-new-photos" aria-label="Brock and Laikyn">
+        <div><img src="brock-memorial-new.jpeg" alt="Brock Roark"></div>
+        <div><img src="laikyn-memorial-new.jpeg" alt="Laikyn Stephens"></div>
       </div>
     </div>
   </section>
