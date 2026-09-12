@@ -1,8 +1,6 @@
 name: Production smoke test
 
 on:
-  schedule:
-    - cron: "*/5 * * * *"
   push:
     branches: [main]
   workflow_dispatch:
