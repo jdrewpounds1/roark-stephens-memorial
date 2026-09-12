@@ -2,7 +2,7 @@
   "updatedAt": "2026-09-10T12:50:00-04:00",
   "items": {
     "item-1": {"highBid": 70, "bidCount": 0, "lastBidAt": null},
-    "item-2": {"highBid": 100, "bidCount": 0, "lastBidAt": null},
+    "item-2": {"highBid": 55, "bidCount": 0, "lastBidAt": null},
     "item-3": {"highBid": 85, "bidCount": 0, "lastBidAt": null},
     "item-4": {"highBid": 150, "bidCount": 0, "lastBidAt": null},
     "item-5": {"highBid": 55, "bidCount": 0, "lastBidAt": null},
