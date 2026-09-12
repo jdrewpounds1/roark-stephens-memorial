@@ -23,7 +23,7 @@
   async function refreshBidBoard(){
     if(!document.querySelector('[data-auction-item]')) return;
     try{
-      const r = await fetch(`auction-bids.json?ts=${Date.now()}`,{cache:'no-store'});
+      const r = await fetch('auction-bids.json',{cache:'no-store'});
       if(!r.ok) throw new Error('bid board unavailable');
       const data = await r.json();
       Object.entries(data.items || {}).forEach(([id,item])=>{

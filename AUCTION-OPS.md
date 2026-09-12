@@ -5,9 +5,16 @@
 1. Participants browse `auction.html` and submit bids through the embedded Jotform **Bid Submission** form.
 2. Bidder name, phone number, and email remain private in Jotform.
 3. The public website reads only `auction-bids.json`, which contains the current verified high bid, public bid count, and latest verified bid time for each item.
-4. `auction.html` checks `auction-bids.json` every 30 seconds, so a verified update appears without requiring visitors to reload the page.
+4. GitHub Actions checks Jotform every five minutes, validates bids, and updates `auction-bids.json` without exposing bidder information.
+5. `auction.html` checks `auction-bids.json` every 30 seconds, so a published update appears without requiring visitors to reload the page.
 
-## Posting a verified bid
+## Automatic verified-bid updates
+
+The workflow at `.github/workflows/update-auction-board.yml` runs every five minutes until the scheduled close. It requires a repository Actions secret named `JOTFORM_API_KEY` with read access to the bid form. It accepts the opening amount as the first valid bid and enforces each item's minimum increment after that.
+
+The workflow commits only when the public totals change. Vercel then publishes that commit automatically from `main`.
+
+## Manual fallback
 
 After confirming a valid Jotform submission, update only the matching item in `auction-bids.json`:
 
@@ -35,4 +42,4 @@ At closing, verify the final submission timestamps in Jotform before declaring w
 
 ## Important
 
-The website refreshes the public bid board automatically, but Jotform does not write directly into the public JSON file. A verified bid must be posted to `auction-bids.json` by an organizer or an authorized automation. This separation keeps bidder contact details off the public site.
+The website never receives bidder names, email addresses, or phone numbers. The automation reads them only inside GitHub Actions and writes only bid amounts, counts, and timestamps to the public JSON file. If the automation is not configured, use the manual fallback above.
