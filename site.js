@@ -1,5 +1,5 @@
 (function(){
-  const closeAt = new Date('2026-09-14T10:00:00-04:00');
+  const closeAt = new Date('2026-09-21T10:00:00-04:00');
   const countdown = document.getElementById('auctionCountdown');
   function tick(){
     if(!countdown) return;
