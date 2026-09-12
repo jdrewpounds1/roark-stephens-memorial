@@ -23,7 +23,12 @@ jobs:
       - name: Build verified public bid board
         env:
           JOTFORM_API_KEY: ${{ secrets.JOTFORM_API_KEY }}
-        run: node scripts/update-auction-bids.mjs
+        run: |
+          if [ -z "$JOTFORM_API_KEY" ]; then
+            echo "JOTFORM_API_KEY is not configured; leaving the manual bid board unchanged."
+            exit 0
+          fi
+          node scripts/update-auction-bids.mjs
       - name: Publish changed bid totals
         run: |
           if git diff --quiet -- auction-bids.json; then
