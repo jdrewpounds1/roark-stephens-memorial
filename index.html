@@ -16,9 +16,10 @@
     @media(max-width:760px){.ribbonmark.memorial-mark{width:72px;height:75px}}
     .hero-new-grid{gap:34px}
     .hero-new-copy{flex:1 1 58%}
-    .hero-new-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:0 1 360px;align-self:stretch;min-height:330px}
+    .hero-new-photos{display:grid;grid-template-columns:1fr;gap:12px;flex:0 1 500px;align-self:stretch;min-height:330px}
     .hero-new-photos div{overflow:hidden;border:2px solid rgba(239,189,69,.62);border-radius:18px;background:#0b2340;box-shadow:0 14px 34px rgba(0,0,0,.25)}
     .hero-new-photos img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+    .hero-family-label{margin-top:12px;text-align:center;color:#ffe6a5;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
     .fundraiser-status{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
     .fundraiser-status-card{display:flex;align-items:center;gap:8px;min-height:48px;padding:8px 11px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:10px}
     .fundraiser-status-card strong,.fundraiser-status-card span{display:block}
@@ -39,7 +40,7 @@
       <div class="brandtext"><strong>Roark &amp; Stephens Strong</strong><span>Together for Our Families</span></div>
     </a>
     <nav aria-label="Primary">
-      <a href="#memorial">Memorial</a><a href="auction.html">Silent Auction</a><a href="registry.html">Visitor Registry</a><a href="apparel.html">Apparel</a><a href="events.html">Events</a><a href="#direct-support">Donate</a>
+      <a href="memorial.html">Memorial</a><a href="auction.html">Silent Auction</a><a href="registry.html">Visitor Registry</a><a href="apparel.html">Apparel</a><a href="events.html">Events</a><a href="#direct-support">Donate</a>
     </nav>
   </div>
 </header>
@@ -50,16 +51,16 @@
         <span class="eyebrow">Roark &amp; Stephens Strong</span>
         <h1>We Remember.<br><em>We Support.</em><br>We Stand Together.</h1>
         <p>Honoring the Roark and Stephens families through community and action. Explore this space to share messages of support, find upcoming events, and participate in our fundraising efforts—from memorial apparel and silent auctions to direct aid.</p>
-        <div class="actions hero-actions"><a class="btn primary" href="#direct-support">Support the Families ♥</a><a class="btn ghost" href="#memorial">Remember Brock &amp; Laikyn →</a></div>
+        <div class="actions hero-actions"><a class="btn primary" href="#direct-support">Support the Families ♥</a><a class="btn ghost" href="memorial.html">Remember Brock &amp; Laikyn →</a></div>
         <div class="fundraiser-status" aria-label="Fundraiser status">
           <div class="fundraiser-status-card active"><span class="status-dot"></span><div><strong>Active now</strong><span>Silent Auction · closes September 21</span></div></div>
           <div class="fundraiser-status-card upcoming"><span class="status-dot"></span><div><strong>Upcoming</strong><span>Friday Night One-Pitch Softball · October 9</span></div></div>
           <div class="fundraiser-status-card completed"><span class="status-dot"></span><div><strong>Completed</strong><span>Labor Day Wrestling Fundraiser · $3,400 raised</span></div></div>
         </div>
       </div>
-      <div class="hero-new-photos" aria-label="Brock and Laikyn">
-        <div><img src="brock-memorial-new.jpeg" alt="Brock Roark"></div>
-        <div><img src="laikyn-memorial-new.jpeg" alt="Laikyn Stephens"></div>
+      <div class="hero-new-photos" aria-label="The families and community who inspired this effort">
+        <div><img src="families-community.jpg" alt="The families and community who inspired Roark and Stephens Strong"></div>
+        <div class="hero-family-label">The families and community who inspired this work</div>
       </div>
     </div>
   </section>
@@ -68,21 +69,21 @@
     <div class="wrap">
       <div class="intro"><small>At the heart of this effort</small><h2>Two Lives. <em class="gold-word">One Lasting Impact.</em></h2><p>Brock and Laikyn are remembered through the people who loved them and through a community determined to keep showing up for their families.</p></div>
       <div class="story-grid memorial-grid-new">
-        <article id="brock" class="story-card memorial-card-new">
+        <a id="brock" class="story-card memorial-card-new" href="brock-memorial.html">
           <div class="story-photo"><img src="brock-memorial-new.jpeg" width="1170" height="1560" alt="In loving memory of Brock Jacob Roark"></div>
           <div class="memorial-cta">Remember Brock <span>♥</span></div>
-        </article>
-        <article id="laikyn" class="story-card memorial-card-new">
+        </a>
+        <a id="laikyn" class="story-card memorial-card-new" href="laikyn-memorial.html">
           <div class="story-photo"><img src="laikyn-memorial-new.jpeg" width="1170" height="1560" alt="Celebrating the life of Laikyn Skye Stephens"></div>
           <div class="memorial-cta">Remember Laikyn <span>♥</span></div>
-        </article>
+        </a>
       </div>
     </div>
   </section>
 
   <section id="ways" class="ways-row">
     <div class="wrap ways-grid">
-      <a class="way-tile" href="#memorial"><div class="way-icon">♡</div><strong>Memorial</strong><span>Remember Brock<br>& Laikyn</span></a>
+      <a class="way-tile" href="memorial.html"><div class="way-icon">♡</div><strong>Memorial</strong><span>Remember Brock<br>& Laikyn</span></a>
       <a class="way-tile" href="auction.html"><div class="way-icon">⚒</div><strong>Silent Auction</strong><span>See items and<br>current high bids</span></a>
       <a class="way-tile" href="registry.html"><div class="way-icon">✍</div><strong>Visitor Registry</strong><span>Leave a message<br>for the families</span></a>
       <a class="way-tile" href="apparel.html"><div class="way-icon">👕</div><strong>Apparel</strong><span>Order fundraiser<br>shirts &amp; hoodies</span></a>
@@ -105,7 +106,7 @@
 
   <section class="legacy legacy-dark"><div class="wrap legacy-center"><div class="legacy-quote">“Together for Our Families”</div><div class="legacy-name">Roark &amp; Stephens Strong</div><img class="legacy-ribbon legacy-ribbon-img" src="rs-strong-dark.png" alt="" aria-hidden="true"></div></section>
 </main>
-<footer><div class="wrap"><img class="footer-ribbon" src="rs-strong-dark.png" alt="Roark &amp; Stephens Strong memorial emblem"><div class="footername">Roark &amp; Stephens Strong</div><p class="footerp">Together for Our Families</p><div class="footlinks"><a href="#memorial">Memorial</a><a href="auction.html">Silent Auction</a><a href="registry.html">Visitor Registry</a><a href="apparel.html">Apparel</a><a href="events.html">Events</a><a href="#direct-support">Donate</a></div></div></footer>
+  <footer><div class="wrap"><img class="footer-ribbon" src="rs-strong-dark.png" alt="Roark &amp; Stephens Strong memorial emblem"><div class="footername">Roark &amp; Stephens Strong</div><p class="footerp">Together for Our Families</p><div class="footlinks"><a href="memorial.html">Memorial</a><a href="auction.html">Silent Auction</a><a href="registry.html">Visitor Registry</a><a href="apparel.html">Apparel</a><a href="events.html">Events</a><a href="#direct-support">Donate</a></div></div></footer>
 <script src="site.js" defer></script>
 </body>
 </html>

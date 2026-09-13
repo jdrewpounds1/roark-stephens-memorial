@@ -52,4 +52,27 @@
   }
   refreshBidBoard();
   setInterval(refreshBidBoard,30000);
+
+  const eventLinks = { 'event-complete':'wrestling-fundraiser.html', 'event-upcoming':'softball-fundraiser.html' };
+  Object.entries(eventLinks).forEach(([className, href]) => {
+    const card = document.querySelector(`.${className}`);
+    if(!card) return;
+    card.setAttribute('role','link');
+    card.setAttribute('tabindex','0');
+    card.setAttribute('title','Open fundraiser story');
+    card.addEventListener('click', event => {
+      if(event.target.closest('a')) return;
+      window.location.href = href;
+    });
+    card.addEventListener('keydown', event => {
+      if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); window.location.href = href; }
+    });
+  });
+  const softballCard = document.querySelector('.event-upcoming .event-body');
+  if(softballCard && !softballCard.querySelector('.softball-contact')){
+    const contact = document.createElement('p');
+    contact.className = 'event-note softball-contact';
+    contact.textContent = 'To register a team or volunteer, contact Stephanie at 470-279-9974.';
+    softballCard.appendChild(contact);
+  }
 })();
