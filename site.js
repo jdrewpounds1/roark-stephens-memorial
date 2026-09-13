@@ -1,4 +1,11 @@
 (function(){
+  const brandText = document.querySelector('.brandtext');
+  if(brandText && !brandText.querySelector('.social-links')){
+    const socials = document.createElement('div');
+    socials.className = 'social-links';
+    socials.innerHTML = '<a href="social-under-construction.html?platform=Facebook">◉ Facebook</a><a href="social-under-construction.html?platform=Instagram">◎ Instagram</a>';
+    brandText.appendChild(socials);
+  }
   const closeAt = new Date('2026-09-21T10:00:00-04:00');
   const countdown = document.getElementById('auctionCountdown');
   function tick(){
