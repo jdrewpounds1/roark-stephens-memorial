@@ -1,10 +1,11 @@
 (function(){
   const brandText = document.querySelector('.brandtext');
-  if(brandText && !brandText.querySelector('.social-links')){
+  if(brandText && !document.querySelector('.social-links')){
     const socials = document.createElement('div');
     socials.className = 'social-links';
-    socials.innerHTML = '<a href="social-under-construction.html?platform=Facebook">◉ Facebook</a><a href="social-under-construction.html?platform=Instagram">◎ Instagram</a>';
-    brandText.appendChild(socials);
+    socials.setAttribute('aria-label','Social pages');
+    socials.innerHTML = '<a href="social-under-construction.html?platform=Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 1.9-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V9c0-.7.3-1 1-1Z"/></svg>Facebook</a><a href="social-under-construction.html?platform=Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="instagram-dot"/></svg>Instagram</a>';
+    brandText.parentElement.appendChild(socials);
   }
   const closeAt = new Date('2026-09-21T10:00:00-04:00');
   const countdown = document.getElementById('auctionCountdown');
