@@ -103,4 +103,46 @@
     contact.textContent = 'To register a team or volunteer, contact Stephanie at 470-279-9974.';
     softballCard.appendChild(contact);
   }
+
+  const ticker = document.querySelector('.supporter-ticker');
+  if(ticker){
+    const logo = (domain, alt) => `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+    const items = `
+      <a class="supporter-partner goldmine" href="https://www.goldmineperformance.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Goldmine Performance"><img src="https://images.squarespace-cdn.com/content/68eaa3b9bb6c215f7060a368/451e6348-7e1d-4dff-bb55-c4f1a9c096a9/GMPLogo_2.png?content-type=image%2Fpng&format=300w" alt="Goldmine Performance logo"><span>Goldmine Performance</span></a>
+      <a class="supporter-partner" href="https://www.celaphotog.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Cela Photography"><img src="${logo('celaphotog.com','Cela Photography')}" alt="Cela Photography logo"><span>Cela Photography</span></a>
+      <span class="supporter-cluster" aria-label="Labor Day wrestling fundraiser partners"><span class="cluster-label">Wrestling Camp Partners</span>
+        <a class="supporter-partner" href="https://www.slatewrestlingacademy.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Slate Wrestling Academy"><img src="${logo('slatewrestlingacademy.com','Slate Wrestling Academy')}" alt="Slate Wrestling Academy logo"><span>Slate Wrestling Academy</span></a>
+        <a class="supporter-partner" href="https://www.thecolosseumtraining.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit The Colosseum Training Center"><img src="${logo('thecolosseumtraining.com','The Colosseum Training Center')}" alt="The Colosseum Training Center logo"><span>The Colosseum</span></a>
+        <a class="supporter-partner" href="https://cms.carrolltoncityschools.net/" target="_blank" rel="noopener noreferrer" aria-label="Visit Carrollton Middle School"><img src="${logo('cms.carrolltoncityschools.net','Carrollton Middle School')}" alt="Carrollton Middle School logo"><span>Carrollton Middle School</span></a>
+      </span>`;
+    const track = ticker.querySelector('.supporter-ticker-track');
+    if(track) track.innerHTML = `<span class="ticker-set">${items}</span><span class="ticker-set" aria-hidden="true">${items}</span>`;
+    const label = ticker.querySelector('.supporter-ticker-label');
+    if(label) label.innerHTML = '<img src="rs-ribbon-white.png" alt="">Community Supporters';
+    if(!document.getElementById('supporterTickerUpgradeStyles')){
+      const style = document.createElement('style');
+      style.id = 'supporterTickerUpgradeStyles';
+      style.textContent = `
+        .supporter-ticker{display:flex;align-items:stretch;background:#071a31;color:#fff;border-top:1px solid rgba(239,189,69,.35);border-bottom:1px solid rgba(239,189,69,.35);overflow:hidden;min-height:74px}
+        .supporter-ticker-label{flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:0 16px;background:linear-gradient(135deg,#efbd45,#dba52b);color:#10213a;font-weight:900;font-size:10px;letter-spacing:.11em;text-transform:uppercase;z-index:2;box-shadow:8px 0 24px rgba(0,0,0,.18)}
+        .supporter-ticker-label img{width:30px;height:36px;object-fit:contain}
+        .supporter-ticker-window{overflow:hidden;flex:1;display:flex;align-items:center}
+        .supporter-ticker-track{display:flex;width:max-content;animation:supportScroll 48s linear infinite;will-change:transform}
+        .ticker-set{display:flex;align-items:center;gap:14px;padding:8px 14px}
+        .supporter-partner{display:inline-flex;align-items:center;gap:8px;min-height:50px;padding:5px 10px;border-radius:10px;text-decoration:none;color:#fff;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);white-space:nowrap;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+        .supporter-partner:hover{background:rgba(239,189,69,.12);border-color:rgba(239,189,69,.55);transform:translateY(-1px)}
+        .supporter-partner img{width:40px;height:40px;object-fit:contain;border-radius:50%;background:#fff;padding:2px;flex:0 0 auto}
+        .supporter-partner.goldmine img{border-radius:50%;padding:0}
+        .supporter-partner span{font-size:11px;font-weight:800;letter-spacing:.01em}
+        .supporter-cluster{display:inline-flex;align-items:center;gap:7px;padding:5px 8px 5px 10px;border:1px solid rgba(239,189,69,.55);border-radius:12px;background:rgba(239,189,69,.08);position:relative;white-space:nowrap}
+        .cluster-label{display:inline-flex;align-items:center;align-self:stretch;padding-right:8px;border-right:1px solid rgba(239,189,69,.32);font-size:8px;line-height:1.15;text-transform:uppercase;letter-spacing:.12em;color:#f5ca62;font-weight:900;max-width:64px;white-space:normal;text-align:center}
+        .supporter-cluster .supporter-partner{background:rgba(255,255,255,.03);padding:4px 7px;border-color:transparent}
+        @keyframes supportScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+        .supporter-ticker:hover .supporter-ticker-track,.supporter-ticker:focus-within .supporter-ticker-track{animation-play-state:paused}
+        @media (max-width:760px){.supporter-ticker{min-height:66px}.supporter-ticker-label{padding:0 10px;font-size:8px;max-width:98px;line-height:1.15;text-align:center}.supporter-ticker-label img{width:25px;height:30px}.ticker-set{gap:9px;padding:7px 9px}.supporter-partner{min-height:44px;padding:4px 7px}.supporter-partner img{width:34px;height:34px}.supporter-partner span{font-size:9px}.cluster-label{font-size:7px;max-width:55px}.supporter-ticker-track{animation-duration:38s}}
+        @media (prefers-reduced-motion:reduce){.supporter-ticker-track{animation:none}}
+      `;
+      document.head.appendChild(style);
+    }
+  }
 })();
