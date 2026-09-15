@@ -1,4 +1,12 @@
 (function(){
+  const primaryNav = document.querySelector('.top nav');
+  if(primaryNav && !primaryNav.querySelector('a[href="football.html"]')){
+    const footballLink = document.createElement('a');
+    footballLink.href = 'football.html';
+    footballLink.textContent = 'Football';
+    const eventsLink = primaryNav.querySelector('a[href="events.html"]');
+    primaryNav.insertBefore(footballLink, eventsLink || null);
+  }
   const brandText = document.querySelector('.brandtext');
   if(brandText && !document.querySelector('.social-links')){
     const socials = document.createElement('div');
