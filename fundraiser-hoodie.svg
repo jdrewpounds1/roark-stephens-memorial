@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Roark and Stephens Strong fundraiser hoodie</title>
+  <desc id="desc">Black memorial hoodie featuring the Together for Our Families artwork.</desc>
+  <defs>
+    <linearGradient id="hood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a2d33"/><stop offset=".48" stop-color="#080a0d"/><stop offset="1" stop-color="#1a1d22"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#06172b" flood-opacity=".3"/>
+    </filter>
+    <clipPath id="chest"><path d="M97 75h126l12 115H85z"/></clipPath>
+  </defs>
+  <ellipse cx="160" cy="197" rx="118" ry="13" fill="#06172b" opacity=".14"/>
+  <g filter="url(#shadow)">
+    <path d="M116 55c4-30 21-43 44-43s40 13 44 43l-16 28h-56z" fill="url(#hood)" stroke="#363a42" stroke-width="4"/>
+    <path d="M121 58 78 76 39 157l39 20 25-43-18 64h150l-18-64 25 43 39-20-39-81-43-18c-9 16-22 23-39 23s-30-7-39-23Z" fill="url(#hood)" stroke="#363a42" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M132 47c3 19 12 29 28 29s25-10 28-29" fill="none" stroke="#d2ad4d" stroke-width="3"/>
+    <path d="M137 58 125 99M183 58l12 41" stroke="#e8e0cf" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="125" cy="101" r="4" fill="#d2ad4d"/><circle cx="195" cy="101" r="4" fill="#d2ad4d"/>
+    <path d="M119 166h82l9 31H110z" fill="#111318" stroke="#393d45" stroke-width="2"/>
+  </g>
+  <image href="apparel-art.jpg" x="112" y="86" width="96" height="72" preserveAspectRatio="xMidYMid meet" clip-path="url(#chest)"/>
+</svg>
