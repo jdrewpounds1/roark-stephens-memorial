@@ -28,15 +28,14 @@ After confirming a valid Jotform submission, update only the matching item in `a
 ## Item map
 
 - `item-1` — Four Private Assisted Stretch Sessions — opening $70
-- `item-2` — Three Private Training Sessions — opening $100
-- `item-3` — Color Powder Party — opening $85
+- `item-2` — Three Private Training Sessions — opening $55
 - `item-4` — Professional Athlete Photo Shoot — opening $150
 - `item-5` — Slate Wrestling Academy one-month membership — opening $55
 - `item-6` — The Colosseum one-month membership — opening $55
 
 ## Closing
 
-Scheduled close: **Monday, September 14, 2026 at 10:00 AM Eastern**.
+Scheduled close: **Monday, September 28, 2026 at 10:00 AM Eastern**.
 
 At closing, verify the final submission timestamps in Jotform before declaring winners. The highest valid bid received before the deadline wins. Contact winners using the private Jotform submission information.
 

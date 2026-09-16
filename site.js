@@ -27,7 +27,7 @@
     slot.appendChild(socials);
     if(brand) brand.appendChild(slot);
   }
-  const closeAt = new Date('2026-09-21T10:00:00-04:00');
+  const closeAt = new Date('2026-09-28T10:00:00-04:00');
   const countdown = document.getElementById('auctionCountdown');
   function tick(){
     if(!countdown) return;
