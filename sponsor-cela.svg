@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Cela Photography</title>
+  <desc id="desc">Cela Photography wordmark</desc>
+  <rect width="512" height="512" rx="72" fill="#fff"/>
+  <circle cx="256" cy="210" r="132" fill="none" stroke="#111827" stroke-width="18"/>
+  <circle cx="256" cy="210" r="84" fill="none" stroke="#c6962f" stroke-width="10"/>
+  <path d="M256 78l57 98-114 68-57-99zM370 210l-57 99-114-66 57-99zM256 342l-57-99 114-67 57 98z" fill="#111827" opacity=".92"/>
+  <text x="256" y="430" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="800" letter-spacing="10" fill="#111827">CELA</text>
+  <text x="256" y="468" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing="7" fill="#9a6f17">PHOTOGRAPHY</text>
+</svg>

@@ -35,7 +35,7 @@ for (let attempt = 1; attempt <= 30; attempt += 1) {
 }
 
 const requiredHeaders = {
-  'content-security-policy': ["default-src 'self'", 'frame-src https://form.jotform.com', 'https://www.google.com'],
+  'content-security-policy': ["default-src 'self'", "img-src 'self' data:", 'frame-src https://form.jotform.com'],
   'referrer-policy': ['strict-origin-when-cross-origin'],
   'x-content-type-options': ['nosniff'],
   'x-frame-options': ['DENY'],
@@ -92,7 +92,21 @@ check(!football.includes('Temple Middle School'), 'Football page still contains 
 const script = await get('/site.js');
 check(script.response.ok, 'site.js did not load');
 check(script.body.includes('2026-09-28T10:00:00-04:00'), 'Auction countdown has the wrong deadline');
-check(script.body.includes('supporter-logo.fallback'), 'Supporter-logo fallback is missing');
+const sponsorAssets = [
+  'sponsor-goldmine.webp',
+  'sponsor-cela.svg',
+  'sponsor-slate.webp',
+  'sponsor-colosseum.webp',
+  'sponsor-carrollton.png'
+];
+for (const asset of sponsorAssets) {
+  check(script.body.includes(asset), `site.js is missing sponsor asset: ${asset}`);
+  const response = await fetch(new URL(`/${asset}`, BASE));
+  check(response.ok, `Sponsor asset ${asset} returned ${response.status}`);
+  check(Number(response.headers.get('content-length') || 1) > 0, `Sponsor asset ${asset} is empty`);
+}
+check(!script.body.includes('google.com/s2/favicons'), 'site.js still depends on Google favicon proxy');
+check(!script.body.includes('squarespace-cdn.com'), 'site.js still hotlinks a sponsor logo');
 
 const externalChecks = [
   ['https://form.jotform.com/262488411019053', ['September 21', 'Slate Wrestling Academy', 'Temple High School']],
@@ -108,8 +122,19 @@ for (const [url, fragments] of externalChecks) {
   for (const fragment of fragments) check(body.includes(fragment), `${url} is missing: ${fragment}`);
 }
 
+const sponsorDestinations = [
+  'https://www.goldmineperformance.com/',
+  'https://www.celaphotog.com/',
+  'https://www.slatewrestlingacademy.com/',
+  'https://www.thecolosseumtraining.com/',
+  'https://cms.carrolltoncityschools.net/'
+];
+for (const url of sponsorDestinations) {
+  check(script.body.includes(`href="${url}"`), `Sponsor destination is missing from site.js: ${url}`);
+}
+
 const missing = await get('/this-page-does-not-exist');
 check(missing.response.status === 404, `Missing route returned ${missing.response.status}, expected 404`);
 check(missing.body.includes('Page not found'), 'Custom 404 page was not served');
 
-console.log(`Verified ${pages.length} pages, ${seenAssets.size} local assets, 3 live forms, 2 fundraisers, deadlines, header assets, security headers, and the custom 404.`);
+console.log(`Verified ${pages.length} pages, ${seenAssets.size} page assets, ${sponsorAssets.length} local sponsor logos, ${sponsorDestinations.length} sponsor destinations, 3 live forms, 2 fundraisers, deadlines, security headers, and the custom 404.`);
