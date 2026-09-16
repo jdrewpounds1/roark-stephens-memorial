@@ -1,12 +1,4 @@
 (function(){
-  const primaryNav = document.querySelector('.top nav');
-  if(primaryNav && !primaryNav.querySelector('a[href="football.html"]')){
-    const footballLink = document.createElement('a');
-    footballLink.href = 'football.html';
-    footballLink.textContent = 'Football';
-    const eventsLink = primaryNav.querySelector('a[href="events.html"]');
-    primaryNav.insertBefore(footballLink, eventsLink || null);
-  }
   const brandText = document.querySelector('.brandtext');
   if(brandText && !document.querySelector('.social-links')){
     const socials = document.createElement('div');
@@ -109,6 +101,7 @@
     const items = `
       <a class="supporter-partner goldmine" href="https://www.goldmineperformance.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Goldmine Performance"><img src="sponsor-goldmine.webp" alt="Goldmine Performance logo" width="40" height="40"><span>Goldmine Performance</span></a>
       <a class="supporter-partner" href="https://www.celaphotog.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Cela Photography"><img src="sponsor-cela.svg" alt="Cela Photography logo" width="40" height="40"><span>Cela Photography</span></a>
+      <a class="supporter-partner" href="https://teamgeorgiawrestling.sportngin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Team Georgia Wrestling"><img src="sponsor-team-georgia.png" alt="Team Georgia Wrestling logo" width="40" height="40"><span>Team Georgia Wrestling</span></a>
       <span class="supporter-cluster" aria-label="Labor Day wrestling fundraiser partners"><span class="cluster-label">Wrestling Camp Partners</span>
         <a class="supporter-partner" href="https://www.slatewrestlingacademy.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Slate Wrestling Academy"><img src="sponsor-slate.webp" alt="Slate Wrestling Academy logo" width="40" height="40"><span>Slate Wrestling Academy</span></a>
         <a class="supporter-partner" href="https://www.thecolosseumtraining.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit The Colosseum Training Center"><img src="sponsor-colosseum.webp" alt="The Colosseum Training Center logo" width="40" height="40"><span>The Colosseum</span></a>

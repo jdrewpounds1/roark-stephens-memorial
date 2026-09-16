@@ -46,3 +46,9 @@ body{overflow-x:hidden}
   footer{padding-bottom:28px}.footlinks{gap:14px}
 }
 @media(max-width:380px){.ways-grid{grid-template-columns:1fr}.auction-figures{grid-template-columns:1fr}.auction-figure.current-bid{grid-column:auto}}
+
+/* September 2026 identity and hero-spacing refinement */
+.hero-new{padding-bottom:142px}
+.brand .ribbonmark{border-radius:0;background:transparent;box-shadow:none;filter:contrast(1.15) drop-shadow(0 3px 2px rgba(0,0,0,.42))}
+@media(max-width:760px){.hero-new{padding-bottom:116px}}
+@media(max-width:640px){.brand .ribbonmark{border-radius:0}}
