@@ -52,3 +52,53 @@ body{overflow-x:hidden}
 .brand .ribbonmark{border-radius:0;background:transparent;box-shadow:none;filter:contrast(1.15) drop-shadow(0 3px 2px rgba(0,0,0,.42))}
 @media(max-width:760px){.hero-new{padding-bottom:116px}}
 @media(max-width:640px){.brand .ribbonmark{border-radius:0}}
+
+/* Hunter green and Laikyn sky-blue identity */
+:root{
+  --navy:#0b2d22;
+  --navy2:#154936;
+  --navy3:#2b6a52;
+  --hunter:#154936;
+  --hunter-deep:#071f18;
+  --hunter-mid:#246047;
+  --sky:#78b9d8;
+  --sky-soft:#dceff7;
+  --sky-line:#9dcee3;
+  --ink:#18362d;
+  --muted:#60736d;
+  --line:#cbd4cf;
+  --shadow:0 16px 44px rgba(7,31,24,.13);
+  --focus:#78b9d8;
+}
+.top{border-bottom:2px solid rgba(120,185,216,.48)}
+.brandtext strong{color:var(--hunter-deep)}
+.brandtext span,nav a{color:#587169}
+nav a:hover,nav a[aria-current=page]{color:#367f9f}
+.social-links a{color:#42685d;border-color:rgba(120,185,216,.52)}
+.social-links a:hover{color:#2f7898;border-color:var(--sky)}
+.hero{background:radial-gradient(circle at 80% 38%,rgba(120,185,216,.16),transparent 29%),linear-gradient(115deg,#061c16 0%,#0d3528 55%,#246047 100%)}
+.hero-new:before{background:radial-gradient(circle at 80% 20%,rgba(239,189,69,.24),transparent 16%),radial-gradient(circle at 76% 48%,rgba(120,185,216,.15),transparent 31%)}
+.btn.light{border-color:var(--sky-line);color:var(--hunter)}
+.btn.ghost{border-color:rgba(157,206,227,.58)}
+.memorial-cta{background:linear-gradient(135deg,#0a3024,#1f5a43);border-top:2px solid rgba(120,185,216,.72)}
+.way-tile:hover{border-color:var(--sky)}
+.support-card .visual{background:linear-gradient(135deg,#08271d,#246047)}
+.subhero{background:radial-gradient(circle at 78% 26%,rgba(120,185,216,.17),transparent 29%),linear-gradient(135deg,#071f18,#246047);border-bottom:3px solid rgba(120,185,216,.68)}
+.auction-status{background:#08251c}
+.current-bid{background:linear-gradient(145deg,#0e382a,#246047);border-color:#78b9d8}
+.current-bid span{color:#dceff7}
+.wrestling-event{background:radial-gradient(circle at 70% 20%,rgba(239,189,69,.3),transparent 23%),linear-gradient(135deg,#08251c,#246047)}
+.event-visual.wrestling-event{background:radial-gradient(circle at 70% 20%,rgba(239,189,69,.3),transparent 23%),linear-gradient(135deg,#08251c,#246047)!important}
+.legacy-dark{background:radial-gradient(circle at 82% 38%,rgba(120,185,216,.12),transparent 27%),linear-gradient(135deg,#061c16,#164b38)}
+footer{background:#061c16;border-top:2px solid rgba(120,185,216,.42)}
+.supporter-ticker{background:#061c16;border-top:1px solid rgba(120,185,216,.4);border-bottom-color:rgba(120,185,216,.55)}
+.supporter-ticker-label{background:#0d3528;color:#f0c65e}
+.supporter-name b{border-color:rgba(120,185,216,.78);background:#154936;color:var(--sky-soft)}
+.feature-image,.auction-photo-wrap,.auction-photo{background:#0b2d22!important}
+.auction-live-note{background:#eef8fb;border-color:#c5e1ec;border-left-color:var(--sky);color:#385f66}
+.auction-live-note strong{color:#164f5e}
+.event-meta strong{color:var(--hunter)}
+.portrait,.choice img,.story-hero,.thanks,.event-memorial-strip figure,.impact-banner,.coming-note{background:#0b2d22!important}
+.choice div{background:linear-gradient(135deg,#0a3024,#1f5a43)!important;border-top:2px solid rgba(120,185,216,.58)}
+.event-memorial-strip figure,.impact-banner{border-color:rgba(120,185,216,.52)!important}
+.softball-details div{color:var(--hunter-deep)!important}
