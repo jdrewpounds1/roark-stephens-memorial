@@ -110,7 +110,7 @@
     const track = ticker.querySelector('.supporter-ticker-track');
     if(track) track.innerHTML = `<span class="ticker-set">${items}</span><span class="ticker-set" aria-hidden="true">${items}</span>`;
     const label = ticker.querySelector('.supporter-ticker-label');
-    if(label) label.innerHTML = '<img src="rs-ribbon-white.png" alt="">Community Supporters';
+    if(label) label.innerHTML = '<img src="rs-ribbon-white.png?v=20260916c" alt="">Community Supporters';
     if(!document.getElementById('supporterTickerUpgradeStyles')){
       const style = document.createElement('style');
       style.id = 'supporterTickerUpgradeStyles';
