@@ -101,6 +101,7 @@
     const items = `
       <a class="supporter-partner goldmine" href="https://www.goldmineperformance.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Goldmine Performance"><img src="sponsor-goldmine.webp" alt="Goldmine Performance logo" width="40" height="40"><span>Goldmine Performance</span></a>
       <a class="supporter-partner" href="https://www.celaphotog.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Cela Photography"><img src="sponsor-cela.svg" alt="Cela Photography logo" width="40" height="40"><span>Cela Photography</span></a>
+      <a class="supporter-partner acra" href="https://www.acraprintingandsignsvillarica.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit ACRA Printing and Signs"><img src="sponsor-acra.webp" alt="ACRA Printing and Signs logo" width="120" height="40"><span>ACRA Printing &amp; Signs</span></a>
       <a class="supporter-partner" href="https://teamgeorgiawrestling.sportngin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Team Georgia Wrestling"><img src="sponsor-team-georgia.png" alt="Team Georgia Wrestling logo" width="40" height="40"><span>Team Georgia Wrestling</span></a>
       <span class="supporter-cluster" aria-label="Labor Day wrestling fundraiser partners"><span class="cluster-label">Wrestling Camp Partners</span>
         <a class="supporter-partner" href="https://www.slatewrestlingacademy.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Slate Wrestling Academy"><img src="sponsor-slate.webp" alt="Slate Wrestling Academy logo" width="40" height="40"><span>Slate Wrestling Academy</span></a>
@@ -110,7 +111,7 @@
     const track = ticker.querySelector('.supporter-ticker-track');
     if(track) track.innerHTML = `<span class="ticker-set">${items}</span><span class="ticker-set" aria-hidden="true">${items}</span>`;
     const label = ticker.querySelector('.supporter-ticker-label');
-    if(label) label.innerHTML = '<img src="rs-ribbon-white.png?v=20260916g" alt="">Community Supporters';
+    if(label) label.innerHTML = '<img src="rs-ribbon-flat.png?v=20260917a" alt="">Community Supporters';
     if(!document.getElementById('supporterTickerUpgradeStyles')){
       const style = document.createElement('style');
       style.id = 'supporterTickerUpgradeStyles';
@@ -126,13 +127,14 @@
         .supporter-partner:hover{background:rgba(120,185,216,.12);border-color:rgba(120,185,216,.62);transform:translateY(-1px)}
         .supporter-partner img{width:40px;height:40px;object-fit:contain;border-radius:50%;background:#fff;padding:2px;flex:0 0 auto}
         .supporter-partner.goldmine img{border-radius:50%;padding:0}
+        .supporter-partner.acra img{width:112px;height:40px;border-radius:6px;padding:4px 7px}
         .supporter-partner span{font-size:11px;font-weight:800;letter-spacing:.01em}
         .supporter-cluster{display:inline-flex;flex:0 0 auto;align-items:center;gap:14px;padding:5px 12px;border:1px solid rgba(239,189,69,.55);border-radius:12px;background:rgba(239,189,69,.08);position:relative;white-space:nowrap}
         .cluster-label{display:inline-flex;align-items:center;align-self:stretch;padding-right:8px;border-right:1px solid rgba(239,189,69,.32);font-size:8px;line-height:1.15;text-transform:uppercase;letter-spacing:.12em;color:#f5ca62;font-weight:900;max-width:64px;white-space:normal;text-align:center}
         .supporter-cluster .supporter-partner{background:rgba(255,255,255,.03);padding:4px 10px;border-color:transparent}
         @keyframes supportScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
         .supporter-ticker:hover .supporter-ticker-track,.supporter-ticker:focus-within .supporter-ticker-track{animation-play-state:paused}
-        @media (max-width:760px){.supporter-ticker{min-height:66px}.supporter-ticker-label{flex-basis:112px;width:112px;max-width:none;justify-content:center;padding:0 12px;font-size:8px;line-height:1.2;text-align:center;box-shadow:none}.supporter-ticker-label img{display:none}.supporter-ticker-window{border-left:4px solid #78b9d8}.supporter-ticker-window:before{width:30px}.ticker-set{gap:14px;padding:7px 18px}.supporter-partner{gap:9px;min-height:44px;padding:4px 10px}.supporter-partner img{width:34px;height:34px}.supporter-partner span{font-size:9px}.supporter-cluster{gap:10px;padding:5px 10px}.supporter-cluster .supporter-partner{padding:4px 9px}.cluster-label{font-size:7px;max-width:55px}.supporter-ticker-track{animation-duration:42s}}
+        @media (max-width:760px){.supporter-ticker{min-height:66px}.supporter-ticker-label{flex-basis:112px;width:112px;max-width:none;justify-content:center;padding:0 12px;font-size:8px;line-height:1.2;text-align:center;box-shadow:none}.supporter-ticker-label img{display:none}.supporter-ticker-window{border-left:4px solid #78b9d8}.supporter-ticker-window:before{width:30px}.ticker-set{gap:14px;padding:7px 18px}.supporter-partner{gap:9px;min-height:44px;padding:4px 10px}.supporter-partner img{width:34px;height:34px}.supporter-partner.acra img{width:94px;height:34px;border-radius:5px}.supporter-partner span{font-size:9px}.supporter-cluster{gap:10px;padding:5px 10px}.supporter-cluster .supporter-partner{padding:4px 9px}.cluster-label{font-size:7px;max-width:55px}.supporter-ticker-track{animation-duration:42s}}
         @media (prefers-reduced-motion:reduce){.supporter-ticker-track{animation:none}}
       `;
       document.head.appendChild(style);

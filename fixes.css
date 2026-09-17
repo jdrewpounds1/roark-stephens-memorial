@@ -4,12 +4,12 @@ body{overflow-x:hidden}
 .topin{padding:8px 0}
 .top nav{flex-wrap:wrap;justify-content:flex-end}
 .memorial-card-new .memorial-cta{cursor:default}
-.feature-image{padding:0!important;overflow:hidden;background:#07182e!important}
+.feature-image{padding:0!important;overflow:hidden;background:#0b2d22!important}
 .feature-image img{width:100%;height:100%;object-fit:cover;display:block}
 /* Auction artwork is intentionally shown in full. Do not crop donor cards/photos. */
-.auction-photo-wrap{height:360px;background:#07182e}
-.auction-photo{object-fit:contain!important;object-position:center;background:#07182e}
-.auction-live-note{display:flex;gap:10px;align-items:flex-start;margin:0 auto 24px;max-width:920px;background:#eef6ff;border:1px solid #c8d9ec;border-left:4px solid #234c76;border-radius:11px;padding:14px 16px;color:#38506b;font-size:13px}
+.auction-photo-wrap{height:360px;background:#0b2d22}
+.auction-photo{object-fit:contain!important;object-position:center;background:#0b2d22}
+.auction-live-note{display:flex;gap:10px;align-items:flex-start;margin:0 auto 24px;max-width:920px;background:#eef6ff;border:1px solid #c8d9ec;border-left:4px solid #78b9d8;border-radius:11px;padding:14px 16px;color:#38506b;font-size:13px}
 .auction-live-note strong{color:#163a60}
 .bid-meta{margin-top:5px!important;font-size:10px!important;color:#d7e2ef!important;line-height:1.35}
 .bid-status-pill{display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border-radius:999px;background:#eef8ef;color:#2b6b36;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin:8px 0 15px;align-self:flex-start}
@@ -49,7 +49,7 @@ body{overflow-x:hidden}
 
 /* September 2026 identity and hero-spacing refinement */
 .hero-new{padding-bottom:142px}
-.brand .ribbonmark{border-radius:0;background:transparent;box-shadow:none;filter:contrast(1.15) drop-shadow(0 3px 2px rgba(0,0,0,.42))}
+.brand .ribbonmark{border-radius:0;background:transparent;box-shadow:none;filter:drop-shadow(0 3px 2px rgba(0,0,0,.34))}
 @media(max-width:760px){.hero-new{padding-bottom:116px}}
 @media(max-width:640px){.brand .ribbonmark{border-radius:0}}
 
@@ -79,7 +79,9 @@ nav a:hover,nav a[aria-current=page]{color:#367f9f}
 .hero{background:radial-gradient(circle at 80% 38%,rgba(120,185,216,.16),transparent 29%),linear-gradient(115deg,#061c16 0%,#0d3528 55%,#246047 100%)}
 .hero-new:before{background:radial-gradient(circle at 80% 20%,rgba(239,189,69,.24),transparent 16%),radial-gradient(circle at 76% 48%,rgba(120,185,216,.15),transparent 31%)}
 .btn.light{border-color:var(--sky-line);color:var(--hunter)}
+.btn.light:hover{background:var(--sky-soft);border-color:var(--sky);color:var(--hunter-deep)}
 .btn.ghost{border-color:rgba(157,206,227,.58)}
+.btn.ghost:hover{background:rgba(120,185,216,.13);border-color:var(--sky)}
 .memorial-cta{background:linear-gradient(135deg,#0a3024,#1f5a43);border-top:2px solid rgba(120,185,216,.72)}
 .way-tile:hover{border-color:var(--sky)}
 .support-card .visual{background:linear-gradient(135deg,#08271d,#246047)}
@@ -102,3 +104,4 @@ footer{background:#061c16;border-top:2px solid rgba(120,185,216,.42)}
 .choice div{background:linear-gradient(135deg,#0a3024,#1f5a43)!important;border-top:2px solid rgba(120,185,216,.58)}
 .event-memorial-strip figure,.impact-banner{border-color:rgba(120,185,216,.52)!important}
 .softball-details div{color:var(--hunter-deep)!important}
+.support-emblem,.legacy-ribbon-img,.footer-ribbon,.coming-mark{filter:drop-shadow(0 4px 3px rgba(0,0,0,.3))}
