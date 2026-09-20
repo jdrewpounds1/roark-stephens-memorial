@@ -1,5 +1,6 @@
 const COOKIE_NAME = 'rs_unique_visitor';
 const COUNTER_KEY = 'rs:homepage:unique-visitors';
+const HISTORICAL_BASELINE = 39;
 const TEN_YEARS = 60 * 60 * 24 * 365 * 10;
 
 function cookieValue(header, name) {
@@ -14,6 +15,7 @@ function isAutomated(userAgent) {
 async function redis(command, key) {
   const baseUrl = process.env.KV_REST_API_URL;
   const token = process.env.KV_REST_API_TOKEN;
+
   if (!baseUrl || !token) throw new Error('Counter storage is not configured');
 
   const response = await fetch(
@@ -25,6 +27,7 @@ async function redis(command, key) {
   );
 
   if (!response.ok) throw new Error(`Counter storage returned ${response.status}`);
+
   const payload = await response.json();
   return Number(payload.result || 0);
 }
@@ -51,7 +54,7 @@ export default async function handler(request, response) {
       );
     }
 
-    return response.status(200).json({ count });
+    return response.status(200).json({ count: count + HISTORICAL_BASELINE });
   } catch (error) {
     console.error('visitor counter error', error);
     return response.status(503).json({ error: 'Counter temporarily unavailable' });
