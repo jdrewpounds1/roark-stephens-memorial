@@ -134,7 +134,6 @@
       document.head.appendChild(style);
     }
   }
-}
   const visitorCount = document.querySelector('[data-visitor-count]');
   if(visitorCount){
     fetch('/api/visitor-count',{cache:'no-store',credentials:'same-origin'})
