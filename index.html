@@ -50,6 +50,14 @@
     .fundraiser-status-card.active .status-dot{background:#efbd45;box-shadow:0 0 0 4px rgba(239,189,69,.16)}
     .fundraiser-status-card.completed{opacity:.78}
     @media(max-width:760px){.hero-new-grid{display:block}.hero-new-photos{margin-top:25px;min-height:230px}.fundraiser-status{display:grid;grid-template-columns:1fr}.fundraiser-status-card{width:100%}}
+
+    .visitor-counter{display:inline-grid;grid-template-columns:auto auto 1fr;align-items:center;gap:10px;margin-top:18px;padding:10px 14px;border:1px solid rgba(120,185,216,.48);border-radius:12px;background:rgba(7,31,24,.72);box-shadow:0 10px 24px rgba(0,0,0,.12);color:#fff}
+    .visitor-counter-icon{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:rgba(239,189,69,.16);color:#f5ca62;font-size:15px}
+    .visitor-counter-number{min-width:2ch;color:#f5ca62;font:700 28px/1 'Fraunces',serif;font-variant-numeric:tabular-nums}
+    .visitor-counter-copy{display:flex;flex-direction:column;line-height:1.25}
+    .visitor-counter-copy strong{font-size:11px;text-transform:uppercase;letter-spacing:.09em}
+    .visitor-counter-copy small{margin-top:3px;color:rgba(255,255,255,.7);font-size:9px}
+    @media(max-width:760px){.visitor-counter{display:grid;width:100%;grid-template-columns:auto auto 1fr}.visitor-counter-number{font-size:25px}}
   </style>
 </head>
 <body>
@@ -87,6 +95,11 @@
           <div class="fundraiser-status-card active"><span class="status-dot"></span><div><strong>Silent Auction · Monday, September 28</strong><span>Bidding closes at 10:00 AM ET</span></div></div>
           <div class="fundraiser-status-card upcoming"><span class="status-dot"></span><div><strong>Upcoming</strong><span>Friday Night One-Pitch Softball · October 9</span></div></div>
           <div class="fundraiser-status-card completed"><span class="status-dot"></span><div><strong>Completed</strong><span>Labor Day Wrestling Fundraiser · $3,400 raised</span></div></div>
+        </div>
+        <div class="visitor-counter" aria-live="polite" aria-label="Unique website visitors">
+          <span class="visitor-counter-icon" aria-hidden="true">♥</span>
+          <span class="visitor-counter-number" data-visitor-count>—</span>
+          <span class="visitor-counter-copy"><strong>Community visitors</strong><small>Counted once per browser since September 20, 2026</small></span>
         </div>
       </div>
       <div class="hero-new-photos" aria-label="The families and community who inspired this effort">
@@ -141,6 +154,6 @@
   <section class="legacy legacy-dark"><div class="wrap legacy-center"><div class="legacy-quote">“Together for Our Families”</div><div class="legacy-name">Roark &amp; Stephens Strong</div><img class="legacy-ribbon legacy-ribbon-img" src="rs-ribbon-master.webp?v=20260917d" alt="" aria-hidden="true"></div></section>
 </main>
   <footer><div class="wrap"><img class="footer-ribbon" src="rs-ribbon-master.webp?v=20260917d" alt="Roark &amp; Stephens Strong memorial emblem"><div class="footername">Roark &amp; Stephens Strong</div><p class="footerp">Together for Our Families</p><div class="footlinks"><a href="memorial.html">Memorial</a><a href="auction.html">Silent Auction</a><a href="registry.html">Visitor Registry</a><a href="apparel.html">Apparel</a><a href="events.html">Events</a><a href="#direct-support">Donate</a></div></div></footer>
-<script src="site.js?v=20260917i" defer></script>
+<script src="site.js?v=20260920a" defer></script>
 </body>
 </html>
