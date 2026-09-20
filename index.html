@@ -63,6 +63,15 @@
     .visitor-counter-strip .wrap{display:flex;justify-content:flex-end}
     .visitor-counter-strip .visitor-counter{margin:0;padding:8px 12px;background:#0b2d22;box-shadow:0 6px 16px rgba(0,0,0,.14)}
     @media(max-width:760px){.visitor-counter-strip{padding:7px 0}.visitor-counter-strip .wrap{justify-content:center}.visitor-counter-strip .visitor-counter{width:100%}}
+
+    .featured-event-home{padding:20px 0;background:linear-gradient(135deg,#0a3024,#154936);border-bottom:3px solid #78b9d8;color:#fff}
+    .featured-event-home-card{display:grid;grid-template-columns:112px 1fr auto;align-items:center;gap:24px;padding:22px 24px;border:1px solid rgba(120,185,216,.58);border-radius:18px;background:rgba(3,17,15,.42);box-shadow:0 15px 34px rgba(0,0,0,.18)}
+    .featured-event-date{display:grid;place-items:center;min-height:102px;border-radius:14px;background:#f7f2e9;color:#0b2d22;text-align:center;border:2px solid #efbd45}
+    .featured-event-date span{font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.featured-event-date strong{font:700 48px/1 'Fraunces',serif}.featured-event-date small{font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .featured-event-copy .kicker{color:#f5ca62}.featured-event-copy h2{margin:5px 0 7px;color:#fff;font:650 clamp(27px,3vw,39px)/1.02 'Fraunces',serif}.featured-event-copy p{margin:0;max-width:720px;color:rgba(255,255,255,.84);font-size:14px;line-height:1.55}.featured-event-copy b{color:#fff}
+    .featured-event-home .btn{white-space:nowrap;background:#efbd45;color:#0b2d22;border-color:#efbd45}.featured-event-home .btn:hover{background:#f7d97f;border-color:#f7d97f}
+    @media(max-width:860px){.featured-event-home-card{grid-template-columns:92px 1fr}.featured-event-home .btn{grid-column:1/-1;width:100%}.featured-event-date{min-height:92px}.featured-event-date strong{font-size:42px}}
+    @media(max-width:560px){.featured-event-home{padding:14px 0}.featured-event-home-card{grid-template-columns:76px 1fr;gap:14px;padding:16px}.featured-event-date{min-height:80px}.featured-event-date strong{font-size:34px}.featured-event-copy h2{font-size:25px}.featured-event-copy p{font-size:13px}}
   </style>
 </head>
 <body>
@@ -97,6 +106,19 @@
       </div>
     </div>
   </div>
+  <section class="featured-event-home" aria-labelledby="featured-event-title">
+    <div class="wrap">
+      <div class="featured-event-home-card">
+        <div class="featured-event-date" aria-label="Saturday, September 26"><span>Sat</span><strong>26</strong><small>September</small></div>
+        <div class="featured-event-copy">
+          <div class="kicker">Featured Upcoming Event · Heflin, Alabama</div>
+          <h2 id="featured-event-title">West Georgia: Let’s Help Fill the Stands for Coach Brock</h2>
+          <p>Make the trip to L.E. Bell Field for Heflin PARD Football’s first home games. A memorial prayer begins <b>before the 9:00 AM Bronze game</b>. Wear hunter green or camo as we honor Coach Brock Roark.</p>
+        </div>
+        <a class="btn primary" href="heflin-coach-brock-memorial.html">Event Details →</a>
+      </div>
+    </div>
+  </section>
   <section class="hero hero-new">
     <div class="wrap hero-new-grid hero-single">
       <div class="hero-new-copy">
