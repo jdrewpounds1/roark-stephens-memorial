@@ -134,4 +134,22 @@
       document.head.appendChild(style);
     }
   }
+}
+  const visitorCount = document.querySelector('[data-visitor-count]');
+  if(visitorCount){
+    fetch('/api/visitor-count',{cache:'no-store',credentials:'same-origin'})
+      .then(response => {
+        if(!response.ok) throw new Error('visitor count unavailable');
+        return response.json();
+      })
+      .then(data => {
+        const count = Number(data.count);
+        visitorCount.textContent = Number.isFinite(count) ? count.toLocaleString('en-US') : '—';
+      })
+      .catch(() => {
+        visitorCount.textContent = '—';
+        const copy = visitorCount.nextElementSibling && visitorCount.nextElementSibling.querySelector('small');
+        if(copy) copy.textContent = 'Visitor count will return shortly';
+      });
+  }
 })();
