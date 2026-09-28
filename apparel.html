@@ -33,47 +33,68 @@
     .future-order-note h3{margin:8px 0 10px;color:#fff;font:650 clamp(28px,4vw,38px)/1.05 'Fraunces',serif}
     .future-order-note p{margin:0;max-width:800px;color:rgba(255,255,255,.9);font-size:17px;line-height:1.65}
     @media(max-width:760px){.apparel-closed-panel{padding:22px}.apparel-example-grid{grid-template-columns:1fr}.apparel-example-art{min-height:270px}.apparel-example-art img{height:240px}}
-
+    .apparel-split{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+    .apparel-lane{padding:30px;border-radius:22px;background:#fff;border:1px solid #cad5cf;box-shadow:0 14px 34px rgba(7,31,24,.08)}
+    .apparel-lane-vote{background:linear-gradient(160deg,#0b2d22,#164f3a);border-color:rgba(120,185,216,.6);color:#fff}
+    .apparel-lane-vote .intro h2{color:#fff}.apparel-lane-vote .intro p{color:rgba(255,255,255,.86)}
+    .lane-status{display:inline-flex;margin-bottom:20px;padding:9px 14px;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
+    .vote-badge{background:#efbd45;color:#0b2d22}
+    .apparel-example-grid.compact{margin:24px 0;gap:14px}
+    .apparel-example-grid.compact .apparel-example-art{min-height:210px;padding:14px}
+    .apparel-example-grid.compact .apparel-example-art img{height:190px}
+    .apparel-example-grid.compact .apparel-example-copy{padding:15px 16px 18px}
+    .apparel-example-grid.compact .apparel-example-copy strong{font-size:20px}
+    .compact-note{margin-top:18px;padding:22px}.compact-note h3{font-size:27px}.compact-note p{font-size:15px}
+    .vote-visual{display:grid;grid-template-columns:86px 1fr;gap:18px;align-items:center;margin:28px 0;padding:22px;border:1px solid rgba(255,255,255,.18);border-radius:18px;background:rgba(255,255,255,.08)}
+    .vote-number{display:grid;place-items:center;width:86px;height:86px;border-radius:50%;background:#efbd45;color:#0b2d22;font:800 46px/1 'Fraunces',serif}
+    .vote-visual strong,.vote-visual span{display:block}.vote-visual strong{font-size:19px;color:#fff}.vote-visual span{margin-top:6px;color:rgba(255,255,255,.78);line-height:1.5}
+    .vote-action{width:100%;font-size:14px;padding:14px 18px}
+    .vote-note{margin-top:20px;padding:18px;border-radius:14px;background:rgba(0,0,0,.16);border-left:4px solid #78b9d8}.vote-note strong,.vote-note span{display:block}.vote-note strong{color:#f5ca62}.vote-note span{margin-top:6px;color:rgba(255,255,255,.82);line-height:1.5}
+    @media(max-width:900px){.apparel-split{grid-template-columns:1fr}.apparel-lane{padding:22px}}
   </style>
 </head>
 <body>
 <header class="top"><div class="wrap topin"><a class="brand" href="index.html"><img class="ribbonmark memorial-mark" src="rs-ribbon-master.webp?v=20260917d" alt="Roark &amp; Stephens Strong memorial ribbon"><div class="brandtext"><strong>Roark &amp; Stephens Strong</strong><span>Together for Our Families</span></div></a><nav aria-label="Primary"><a href="index.html#memorial">Memorial</a><a href="auction.html">Silent Auction</a><a href="registry.html">Visitor Registry</a><a href="apparel.html" aria-current="page">Apparel</a><a href="events.html">Events</a><a href="index.html#direct-support">Donate</a></nav></div></header>
-<section class="apparel-feedback-alert" aria-label="Memorial apparel design feedback">
-  <div class="wrap">
-    <div class="apparel-feedback-copy">
-      <div class="apparel-feedback-badge" aria-hidden="true">★</div>
-      <div class="apparel-feedback-text">
-        <strong>Help choose the next memorial T-shirt</strong>
-        <span>Four new designs are up for community feedback. Visit our Facebook post and tell us which design you’d be most interested in preordering to celebrate Brock &amp; Laikyn.</span>
-      </div>
-    </div>
-    <a class="feedback-btn" href="https://www.facebook.com/share/p/1Dw2X2FQfe/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">See the 4 Designs &amp; Vote on Facebook →</a>
-  </div>
-</section>
 <main>
-<section class="subhero"><div class="wrap"><span class="eyebrow">Wear your support</span><h1>Memorial Apparel</h1><p>The original Roark &amp; Stephens Strong T-shirt and hoodie preorder has closed. The original designs are preserved here for anyone who may want to order them again in the future.</p></div></section>
+<section class="subhero"><div class="wrap"><span class="eyebrow">Wear your support</span><h1>Memorial Apparel</h1><p>Two apparel efforts live here now: the completed <strong>Together for Our Families</strong> fundraiser and the community vote helping choose the next memorial designs.</p></div></section>
 
 <section class="section apparel-closed-section"><div class="wrap">
-  <div class="panel apparel-closed-panel">
-    <div class="closed-badge">Original Fundraiser Round Closed</div>
-    <div class="intro"><small>Original memorial apparel</small><h2>T-Shirt &amp; Hoodie</h2><p>Thank you to everyone who supported the original apparel fundraiser. Online ordering for this first round is now closed.</p></div>
+  <div class="apparel-split">
+    <article class="apparel-lane apparel-lane-closed">
+      <div class="lane-status closed-badge">Original Fundraiser Round Closed</div>
+      <div class="intro"><small>Completed apparel fundraiser</small><h2>Together for Our Families</h2><p>The original T-shirt and hoodie preorder is complete. Thank you to everyone who ordered, shared, and helped support the Roark and Stephens families.</p></div>
 
-    <div class="apparel-example-grid">
-      <article class="apparel-example">
-        <div class="apparel-example-art"><img src="fundraiser-tshirt.svg?v=20260928" alt="Example of the original Roark & Stephens Strong memorial T-shirt"></div>
-        <div class="apparel-example-copy"><strong>Original Memorial T-Shirt</strong><span>Example of the original fundraiser design.</span></div>
-      </article>
-      <article class="apparel-example">
-        <div class="apparel-example-art"><img src="fundraiser-hoodie.svg?v=20260928" alt="Example of the original Roark & Stephens Strong memorial hoodie"></div>
-        <div class="apparel-example-copy"><strong>Original Memorial Hoodie / Sweatshirt</strong><span>Example of the original fundraiser design.</span></div>
-      </article>
-    </div>
+      <div class="apparel-example-grid compact">
+        <div class="apparel-example">
+          <div class="apparel-example-art"><img src="fundraiser-tshirt.svg?v=20260928" alt="Original Together for Our Families T-shirt"></div>
+          <div class="apparel-example-copy"><strong>Original T-Shirt</strong><span>Original fundraiser apparel.</span></div>
+        </div>
+        <div class="apparel-example">
+          <div class="apparel-example-art"><img src="fundraiser-hoodie.svg?v=20260928" alt="Original Together for Our Families hoodie"></div>
+          <div class="apparel-example-copy"><strong>Original Hoodie</strong><span>Original fundraiser apparel.</span></div>
+        </div>
+      </div>
 
-    <div class="future-order-note">
-      <span class="future-order-label">Interested in one later?</span>
-      <h3>Reach out to Coach Slate or Coach Boyles.</h3>
-      <p>If you are interested in ordering one of these original T-shirts or hoodies again in the future, please contact <strong>Coach Slate</strong> or <strong>Coach Boyles</strong> directly. They can let you know if another opportunity to order the original apparel becomes available.</p>
-    </div>
+      <div class="future-order-note compact-note">
+        <span class="future-order-label">Interested in the original apparel?</span>
+        <h3>Contact Coach Slate or Coach Boyles.</h3>
+        <p>If another order opportunity opens for the original T-shirt or hoodie, they can provide the details.</p>
+      </div>
+    </article>
+
+    <article class="apparel-lane apparel-lane-vote">
+      <div class="lane-status vote-badge">Community Vote Open</div>
+      <div class="intro"><small>What comes next</small><h2>Choose the Next Memorial Designs</h2><p>Four new designs are currently up for community feedback on Facebook. The vote will help determine which designs move forward and are offered for purchase next.</p></div>
+
+      <div class="vote-visual">
+        <div class="vote-number">4</div>
+        <div><strong>Designs under consideration</strong><span>Review the options, then tell us which one you would be most interested in ordering.</span></div>
+      </div>
+
+      <a class="feedback-btn vote-action" href="https://www.facebook.com/share/p/1Dw2X2FQfe/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">View the 4 Designs &amp; Vote on Facebook →</a>
+
+      <div class="vote-note"><strong>What happens after the vote?</strong><span>Once the community feedback is in, the selected design or designs can be prepared for the next apparel offering.</span></div>
+    </article>
   </div>
 </div></section>
 
