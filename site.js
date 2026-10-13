@@ -99,7 +99,6 @@
   const ticker = document.querySelector('.supporter-ticker');
   if(ticker){
     const items = `
-      <a class="supporter-partner goldmine" href="https://www.goldmineperformance.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Goldmine Performance"><img src="sponsor-goldmine.webp" alt="Goldmine Performance logo" width="40" height="40"><span>Goldmine Performance</span></a>
       <a class="supporter-partner" href="https://www.celaphotog.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Cela Photography"><img src="sponsor-cela.svg" alt="Cela Photography logo" width="40" height="40"><span>Cela Photography</span></a>
       <a class="supporter-partner" href="https://www.acraprintingandsignsvillarica.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit ACRA Printing and Signs"><img src="sponsor-acra-mark.png" alt="ACRA Printing and Signs logo" width="40" height="40"><span>ACRA Printing &amp; Signs</span></a>
       <a class="supporter-partner" href="https://teamgeorgiawrestling.sportngin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Team Georgia Wrestling"><img src="sponsor-team-georgia.png" alt="Team Georgia Wrestling logo" width="40" height="40"><span>Team Georgia Wrestling</span></a>
@@ -124,7 +123,6 @@
         .supporter-partner{display:inline-flex;flex:0 0 auto;align-items:center;gap:10px;min-height:50px;padding:5px 14px;border-radius:10px;text-decoration:none;color:#fff;background:rgba(255,255,255,.045);border:1px solid rgba(120,185,216,.18);white-space:nowrap;transition:background .18s ease,border-color .18s ease,transform .18s ease}
         .supporter-partner:hover{background:rgba(120,185,216,.12);border-color:rgba(120,185,216,.62);transform:translateY(-1px)}
         .supporter-partner img{width:40px;height:40px;object-fit:contain;border-radius:50%;background:#fff;padding:2px;flex:0 0 auto}
-        .supporter-partner.goldmine img{border-radius:50%;padding:0}
         .supporter-partner span{font-size:11px;font-weight:800;letter-spacing:.01em}
         @keyframes supportScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
         .supporter-ticker:hover .supporter-ticker-track,.supporter-ticker:focus-within .supporter-ticker-track{animation-play-state:paused}

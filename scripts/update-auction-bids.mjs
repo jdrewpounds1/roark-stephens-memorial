@@ -6,9 +6,6 @@ const FIXTURE = process.env.JOTFORM_SUBMISSIONS_FILE;
 const CLOSE_AT = new Date('2026-09-28T10:00:00-04:00');
 
 const items = {
-  'Four Private Assisted Stretch Sessions — Goldmine Performance': { id: 'item-1', opening: 70, increment: 15 },
-  '3 Private Training Sessions — Goldmine Performance': { id: 'item-2', opening: 55, increment: 15 },
-  'Three Private Training Sessions — Goldmine Performance': { id: 'item-2', opening: 55, increment: 15 },
   'Professional Athlete Photo Shoot — Cela Photography': { id: 'item-4', opening: 150, increment: 25 },
   '1-Month Membership — Slate Wrestling Academy': { id: 'item-5', opening: 55, increment: 15 },
   '1-Month Membership — The Colosseum Training Center (Carrollton)': { id: 'item-6', opening: 55, increment: 15 }

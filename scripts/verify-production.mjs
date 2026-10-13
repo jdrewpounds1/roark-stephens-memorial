@@ -93,7 +93,6 @@ const script = await get('/site.js');
 check(script.response.ok, 'site.js did not load');
 check(script.body.includes('2026-09-28T10:00:00-04:00'), 'Auction countdown has the wrong deadline');
 const sponsorAssets = [
-  'sponsor-goldmine.webp',
   'sponsor-cela.svg',
   'sponsor-slate.webp',
   'sponsor-colosseum.webp',
@@ -123,7 +122,6 @@ for (const [url, fragments] of externalChecks) {
 }
 
 const sponsorDestinations = [
-  'https://www.goldmineperformance.com/',
   'https://www.celaphotog.com/',
   'https://www.slatewrestlingacademy.com/',
   'https://www.thecolosseumtraining.com/',
